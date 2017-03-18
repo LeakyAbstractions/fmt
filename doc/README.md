@@ -45,28 +45,3 @@ more details.
 
 You should have received a copy of the GNU Lesser General Public License along
 with this software. If not, see <http://www.gnu.org/licenses/>.
-
-### Required
-
-- **License and copyright notice**: Include a copy of the license and copyright
-notice with the code.
-- **Library usage**: The library may be used within a non-open-source
-application.
-- **Disclose Source**: Source code for this library must be made available when
-distributing the software.
-
-### Permitted
-
-- **Commercial Use**: This software and derivatives may be used for commercial
-purposes.
-- **Modification**: This software may be modified.
-- **Distribution**: You may distribute this software.
-- **Sublicensing**: You may grant a sublicense to modify and distribute this
-software to third parties not included in the license.
-- **Patent Grant**: This license provides an express grant of patent rights from
-the contributor to the recipient.
-
-### Forbidden
-
-- **Hold Liable**: Software is provided without warranty and the software
-author/license owner cannot be held liable for damages.
