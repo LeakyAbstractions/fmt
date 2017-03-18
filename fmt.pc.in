@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=${prefix}/include
+
+Name: fmt
+Description: A tiny C string formatting library
+Version: @VERSION@
+Libs: -L${libdir} -llibfmt
+Cflags: -I${includedir}
