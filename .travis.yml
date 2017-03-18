@@ -1,0 +1,38 @@
+language: c
+
+env:
+  global:
+    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created via the "travis encrypt" command using the project repo's public key
+    - secure: "Et6x4IjMAL8eEz8P6DVJj898PVDPzTgsY5z8poZXfIjGhJd0jJxgnUihAM+7Bd4aYwEj7pXTAa+ig2Q8XJ3QiBopeG839+abzZp3hgQew0ryN2Fq7EvxAwDhw4DNbh33Qi5Zqk/aYTlh2manod6nXMd/iN93pSVJ77dMCaYRqIpYsbbx3z5iYIEBo8sUv6IAB4gptTAEz/UIPZ0FqBUtw6HslEcp9llzr8iu+KTQwZNgN1V8UGEcqHTODJCWnoKxZEDsYL4ofYdCZOGZUfVVsbP1Ts7KzJDDEfAQpgDdwFR/Q9PCQAvbNrs1ACy/6QgKP+Hmbn/w+wBSdqyZosytmkxh1yceeLVEy2tvXSTQA4/gJD/ww2bi2VfPcEemxXgHbyxar+78DvW1xdH2eNcv1zjLfcqtmaKJuoz4MtBzh8vznShC40m5z7UBO4B9eDLT7dme1sEyZ1qmC6uKXtHoWXNLsbLUaxcvDdChMKdC1itqu7mljTX6DyRg2VRv32rKCZNq+waV4vm+VUqNRK8opgkUKNreCqIdSbQQz0NpPCjB7SyTSd6/GU3YQVUADH7Ct6OX+hpzEuG6piBuFagGDnlM4xVezA6uwcexr172CgGUA7Ufa3xk2hvkZSo2M3vW/8zBs2tvqG7COBBBguyydUI06kPgwXo6X1pSqnE9xpI="
+
+script:
+
+  - echo travis_fold:start:AUTORECONF
+  - autoreconf --install
+  - echo travis_fold:end:AUTORECONF
+
+  - echo travis_fold:start:CONFIGURE
+  - ./configure
+  - echo travis_fold:end:CONFIGURE
+
+  - echo travis_fold:start:MAKE
+  - make
+  - echo travis_fold:end:MAKE
+
+  - echo travis_fold:start:COVERAGE
+  - make coverage
+  - echo travis_fold:end:COVERAGE
+
+after_success:
+
+  - bash <(curl -s https://codecov.io/bash)
+
+addons:
+  coverity_scan:
+    project:
+      name: "guillermocalvo/fmt"
+      description: "A tiny C string formatting library"
+    notification_email: coverity@guillermo.in
+    build_command_prepend: "autoreconf --install; ./configure; make clean"
+    build_command: "make -j 4"
+    branch_pattern: coverity_scan
