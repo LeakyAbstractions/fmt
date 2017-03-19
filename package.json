@@ -1,0 +1,18 @@
+{
+  "name":           "fmt",
+  "version":        "1.0",
+  "description":    "A tiny C string formatting library",
+  "repo":           "guillermocalvo/fmt",
+  "license":        "LGPL",
+  "src": [
+    "src/fmt.c",
+    "src/fmt.h"
+  ],
+  "keywords": [
+    "formatting",
+    "library",
+    "c",
+    "string",
+    "printf"
+  ]
+}
