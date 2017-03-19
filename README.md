@@ -1,6 +1,11 @@
 
 # fmt
 
+[![Last release](https://img.shields.io/github/release/guillermocalvo/fmt.svg)](https://github.com/guillermocalvo/fmt/releases)
+[![Build status](https://travis-ci.org/guillermocalvo/fmt.svg?branch=master)](https://travis-ci.org/guillermocalvo/fmt)
+[![Code coverage](https://codecov.io/github/guillermocalvo/fmt/coverage.svg?branch=master)](https://codecov.io/github/guillermocalvo/fmt?branch=master)
+[![Static analysis](https://scan.coverity.com/projects/12096/badge.svg)](https://scan.coverity.com/projects/guillermocalvo-fmt)
+
 > Print formatted strings
 
 ![](https://github.com/guillermocalvo/fmt/raw/master/doc/logo.png)
