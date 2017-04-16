@@ -2,3 +2,7 @@
 	path = fmt
 	url = https://github.com/guillermocalvo/fmt-extra.git
 	branch = formatter/fmt
+[submodule "time"]
+	path = time
+	url = https://github.com/guillermocalvo/fmt-extra.git
+	branch = formatter/time
