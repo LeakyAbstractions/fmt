@@ -1,6 +1,5 @@
 ---
-title: PrettyDocs Credits
-menu_name: Credits
+title: Credits
 ---
 
 {: .list .list-unstyled}

@@ -1,6 +1,5 @@
 ---
-title: PrettyDocs License
-menu_name: License
+title: License
 ---
 
 <div class="jumbotron text-center">
