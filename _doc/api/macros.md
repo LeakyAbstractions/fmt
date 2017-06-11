@@ -1,5 +1,7 @@
 ---
 title: Macros
+sections:
+- fmt_error
 ---
 
 ## FMT_ERROR
