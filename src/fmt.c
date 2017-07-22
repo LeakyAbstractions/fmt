@@ -4,7 +4,7 @@
  *
  * fmt source code file
  *
- * @version     1.1
+ * @version     1.2
  * @author      Copyright (c) 2017 Guillermo Calvo
  *
  */

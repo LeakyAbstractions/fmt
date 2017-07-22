@@ -4,7 +4,7 @@
  *
  * fmt header file
  *
- * @version     1.1
+ * @version     1.2
  * @author      Copyright (c) 2017 Guillermo Calvo
  *
  */
@@ -23,7 +23,7 @@ struct fmt_stream{
 	FILE *  file;
 	char *  buffer;
 	size_t  bytes;
-	int     written;
+	size_t  written;
 };
 
 /** Custom formatter */
