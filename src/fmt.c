@@ -32,6 +32,7 @@
 
 # define PARAM_MARK             '%'
 # define PARAM_BEGIN            '{'
+# define PARAM_META             '@'
 # define PARAM_OPTIONS          ':'
 # define PARAM_END              '}'
 
@@ -240,6 +241,11 @@ int fmt_vprint(struct fmt_stream * out, const char * format, va_list * arg){
 					case TYPE_POINTER:      result = PRINT_BUILTIN(out, param, arg, va_arg(*arg, void *) ); break;
 					case TYPE_PERCENT:      result = PRINT_BUILTIN(out, param, arg, 0); break;
 				}
+
+			}else if(*param.id == PARAM_META){
+				/* print meta formatter */
+				fmt_formatter meta = va_arg(*arg, fmt_formatter);
+				result = meta(out, param.id + 1, param.options, arg);
 
 			}else{
 				/* print extended parameter */
