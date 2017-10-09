@@ -41,6 +41,11 @@ TEST_CASE{
 	TEST_EQUALS("Doe, John (32 years)", buffer);
 
 	fmt_stream_buffer(&out, buffer, sizeof(buffer));
+	(void)fmt_print(&out, "%{Person:name} is %{Person:age} old.", &p, &p);
+
+	TEST_EQUALS("John is 32 years old.", buffer);
+
+	fmt_stream_buffer(&out, buffer, sizeof(buffer));
 	(void)fmt_print(&out, "Mr. %{Person:surname} is %{Age} old.", &p, p.age);
 
 	TEST_EQUALS("Mr. Doe is 32 years old.", buffer);
