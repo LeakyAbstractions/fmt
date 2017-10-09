@@ -288,9 +288,9 @@ int fmt_print_builtin(struct fmt_stream * out, const char * format, ...){
 	int written;
 	va_list	arg;
 
-	va_start(arg, format);
-
 	if( !IS_READY(out) ){ return(FMT_ERROR); }
+
+	va_start(arg, format);
 
 	if( IS_FILE(out) ){
 
