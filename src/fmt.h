@@ -4,7 +4,7 @@
  *
  * fmt header file
  *
- * @version     1.3.1
+ * @version     1.3.2
  * @author      Copyright (c) 2017 Guillermo Calvo
  *
  */

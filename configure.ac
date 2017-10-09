@@ -7,7 +7,7 @@ AC_PREREQ([2.68])
 
 
 # Initialize package
-AC_INIT([fmt], [1.3.1], [fmt@guillermo.in], [fmt], [https://github.com/guillermocalvo/fmt/])
+AC_INIT([fmt], [1.3.2], [fmt@guillermo.in], [fmt], [https://github.com/guillermocalvo/fmt/])
 
 
 # Information on the package

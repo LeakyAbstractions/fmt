@@ -4,7 +4,7 @@
  *
  * fmt source code file
  *
- * @version     1.3.1
+ * @version     1.3.2
  * @author      Copyright (c) 2017 Guillermo Calvo
  *
  */
@@ -288,9 +288,9 @@ int fmt_print_builtin(struct fmt_stream * out, const char * format, ...){
 	int written;
 	va_list	arg;
 
-	va_start(arg, format);
-
 	if( !IS_READY(out) ){ return(FMT_ERROR); }
+
+	va_start(arg, format);
 
 	if( IS_FILE(out) ){
 
