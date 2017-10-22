@@ -58,6 +58,7 @@ check_PROGRAMS =                        \
 	bin/check/ldouble                   \
 	bin/check/long                      \
 	bin/check/longlong                  \
+	bin/check/meta                      \
 	bin/check/month                     \
 	bin/check/percent                   \
 	bin/check/person                    \
@@ -78,6 +79,7 @@ TESTS =                                 \
 	bin/check/ldouble                   \
 	bin/check/long                      \
 	bin/check/longlong                  \
+	bin/check/meta                      \
 	bin/check/month                     \
 	bin/check/percent                   \
 	bin/check/person                    \
@@ -109,6 +111,7 @@ bin_check_intmax_SOURCES                = src/fmt.c test/intmax.c
 bin_check_ldouble_SOURCES               = src/fmt.c test/ldouble.c
 bin_check_long_SOURCES                  = src/fmt.c test/long.c
 bin_check_longlong_SOURCES              = src/fmt.c test/longlong.c
+bin_check_meta_SOURCES                  = src/fmt.c test/meta.c
 bin_check_month_SOURCES                 = src/fmt.c test/month.c
 bin_check_percent_SOURCES               = src/fmt.c test/percent.c
 bin_check_person_SOURCES                = src/fmt.c test/person.c
