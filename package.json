@@ -1,6 +1,6 @@
 {
   "name":           "fmt",
-  "version":        "1.4.0",
+  "version":        "1.4.1",
   "description":    "A tiny C string formatting library",
   "repo":           "guillermocalvo/fmt",
   "license":        "LGPL",
