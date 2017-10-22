@@ -11,9 +11,9 @@ TEST_CASE{
 
     struct fmt_stream out = {0};
 
-	fmt_stream_buffer(&out, buffer, sizeof(buffer));
+    fmt_stream_buffer(&out, buffer, sizeof(buffer));
 
-	(void)fmt_print(&out, "TEST %.2Lf TEST", (long double).0);
+    (void)fmt_print(&out, "TEST %.2Lf TEST", (long double).0);
 
-	TEST_EQUALS("TEST 0.00 TEST", buffer);
+    TEST_EQUALS("TEST 0.00 TEST", buffer);
 }

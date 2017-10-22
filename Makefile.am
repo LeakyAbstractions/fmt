@@ -52,6 +52,7 @@ check_PROGRAMS =                        \
 	bin/check/double                    \
 	bin/check/file                      \
 	bin/check/flags                     \
+	bin/check/indirect                  \
 	bin/check/integer                   \
 	bin/check/intmax                    \
 	bin/check/ldouble                   \
@@ -72,6 +73,7 @@ TESTS =                                 \
 	bin/check/double                    \
 	bin/check/file                      \
 	bin/check/flags                     \
+	bin/check/indirect                  \
 	bin/check/integer                   \
 	bin/check/intmax                    \
 	bin/check/ldouble                   \
@@ -103,6 +105,7 @@ lib_libfmt_a_SOURCES                    = src/fmt.c
 bin_check_double_SOURCES                = src/fmt.c test/double.c
 bin_check_file_SOURCES                  = src/fmt.c test/file.c
 bin_check_flags_SOURCES                 = src/fmt.c test/flags.c
+bin_check_indirect_SOURCES              = src/fmt.c test/indirect.c
 bin_check_integer_SOURCES               = src/fmt.c test/integer.c
 bin_check_intmax_SOURCES                = src/fmt.c test/intmax.c
 bin_check_ldouble_SOURCES               = src/fmt.c test/ldouble.c
