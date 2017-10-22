@@ -20,10 +20,10 @@
 /** Output stream */
 struct fmt_stream{
 
-	FILE *  file;
-	char *  buffer;
-	size_t  bytes;
-	size_t  written;
+    FILE *  file;
+    char *  buffer;
+    size_t  bytes;
+    size_t  written;
 };
 
 /** Custom formatter */
