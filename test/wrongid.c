@@ -13,12 +13,12 @@ TEST_CASE{
     struct fmt_stream out = {0};
     int result = 0;
 
-	fmt_stream_buffer(&out, buffer, sizeof(buffer));
+    fmt_stream_buffer(&out, buffer, sizeof(buffer));
 
-	result = fmt_print(&out, "TEST %{Wrong} TEST", &out);
+    result = fmt_print(&out, "TEST %{Wrong} TEST", &out);
 
-	(void)sprintf(tmp, "TEST Wrong@%p", (void *)&out);
+    (void)sprintf(tmp, "TEST Wrong@%p", (void *)&out);
 
-	TEST_EQUALS(tmp, buffer);
-	TEST_ASSERT(result == FMT_ERROR);
+    TEST_EQUALS(tmp, buffer);
+    TEST_ASSERT(result == FMT_ERROR);
 }
