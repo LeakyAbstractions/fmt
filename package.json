@@ -1,9 +1,10 @@
 {
   "name":           "fmt",
-  "version":        "1.4.0",
+  "version":        "1.4.1",
   "description":    "A tiny C string formatting library",
   "repo":           "guillermocalvo/fmt",
   "license":        "LGPL",
+  "install":        "autoreconf --install && ./configure && make install",
   "src": [
     "src/fmt.c",
     "src/fmt.h"
