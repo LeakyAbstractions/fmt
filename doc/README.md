@@ -3,7 +3,7 @@
 
 > Print formatted strings
 
-![](https://github.com/guillermocalvo/fmt/raw/master/doc/logo.png)
+![](https://github.com/LeakyAbstractions/fmt/raw/master/doc/logo.png)
 
 
 ## A tiny C string formatting library
@@ -28,6 +28,13 @@ Write formatted strings to an output stream.
 - `fmt_print`: Print formatted
 - `fmt_print_builtin`: Print formatted (builtin parameters only)
 - `fmt_vprint`: Print formatted variable list of arguments
+
+
+## Author
+
+Copyright 2017 [Guillermo Calvo](https://github.com/guillermocalvo)
+
+[![](https://resume.guillermo.in/assets/images/thumb.png)](https://guillermo.in/)
 
 
 ## License
