@@ -1,6 +1,6 @@
 {
   "name": "fmt",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "A tiny C string formatting library",
   "repo": "LeakyAbstractions/fmt",
   "license": "LGPL",

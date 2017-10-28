@@ -7,7 +7,7 @@ AC_PREREQ([2.68])
 
 
 # Initialize package
-AC_INIT([fmt], [1.4.1], [fmt@guillermo.in], [fmt], [https://github.com/LeakyAbstractions/fmt/])
+AC_INIT([fmt], [1.5.0], [fmt@guillermo.in], [fmt], [https://github.com/LeakyAbstractions/fmt/])
 
 
 # Information on the package
