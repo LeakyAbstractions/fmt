@@ -1,14 +1,14 @@
 
 # fmt
 
-[![Last release](https://img.shields.io/github/release/guillermocalvo/fmt.svg)](https://github.com/guillermocalvo/fmt/releases)
-[![Build status](https://travis-ci.org/guillermocalvo/fmt.svg?branch=master)](https://travis-ci.org/guillermocalvo/fmt)
-[![Code coverage](https://codecov.io/github/guillermocalvo/fmt/coverage.svg?branch=master)](https://codecov.io/github/guillermocalvo/fmt?branch=master)
-[![Static analysis](https://scan.coverity.com/projects/12096/badge.svg)](https://scan.coverity.com/projects/guillermocalvo-fmt)
+[![Last release](https://img.shields.io/github/release/LeakyAbstractions/fmt.svg)](https://github.com/LeakyAbstractions/fmt/releases)
+[![Build status](https://travis-ci.org/LeakyAbstractions/fmt.svg?branch=master)](https://travis-ci.org/LeakyAbstractions/fmt)
+[![Code coverage](https://codecov.io/github/LeakyAbstractions/fmt/coverage.svg?branch=master)](https://codecov.io/github/LeakyAbstractions/fmt?branch=master)
+[![Static analysis](https://scan.coverity.com/projects/14163/badge.svg)](https://scan.coverity.com/projects/leakyabstractions-fmt)
 
 > Print formatted strings
 
-![](https://github.com/guillermocalvo/fmt/raw/master/doc/logo.png)
+![](https://github.com/LeakyAbstractions/fmt/raw/master/doc/logo.png)
 
 
 ## A tiny C string formatting library
@@ -33,6 +33,13 @@ Write formatted strings to an output stream.
 - `fmt_print`: Print formatted
 - `fmt_print_builtin`: Print formatted (builtin parameters only)
 - `fmt_vprint`: Print formatted variable list of arguments
+
+
+## Author
+
+Copyright 2017 [Guillermo Calvo](https://github.com/guillermocalvo)
+
+[![](https://resume.guillermo.in/assets/images/thumb.png)](https://guillermo.in/)
 
 
 ## License

@@ -3,7 +3,10 @@ language: c
 env:
   global:
     # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created via the "travis encrypt" command using the project repo's public key
-    - secure: "Et6x4IjMAL8eEz8P6DVJj898PVDPzTgsY5z8poZXfIjGhJd0jJxgnUihAM+7Bd4aYwEj7pXTAa+ig2Q8XJ3QiBopeG839+abzZp3hgQew0ryN2Fq7EvxAwDhw4DNbh33Qi5Zqk/aYTlh2manod6nXMd/iN93pSVJ77dMCaYRqIpYsbbx3z5iYIEBo8sUv6IAB4gptTAEz/UIPZ0FqBUtw6HslEcp9llzr8iu+KTQwZNgN1V8UGEcqHTODJCWnoKxZEDsYL4ofYdCZOGZUfVVsbP1Ts7KzJDDEfAQpgDdwFR/Q9PCQAvbNrs1ACy/6QgKP+Hmbn/w+wBSdqyZosytmkxh1yceeLVEy2tvXSTQA4/gJD/ww2bi2VfPcEemxXgHbyxar+78DvW1xdH2eNcv1zjLfcqtmaKJuoz4MtBzh8vznShC40m5z7UBO4B9eDLT7dme1sEyZ1qmC6uKXtHoWXNLsbLUaxcvDdChMKdC1itqu7mljTX6DyRg2VRv32rKCZNq+waV4vm+VUqNRK8opgkUKNreCqIdSbQQz0NpPCjB7SyTSd6/GU3YQVUADH7Ct6OX+hpzEuG6piBuFagGDnlM4xVezA6uwcexr172CgGUA7Ufa3xk2hvkZSo2M3vW/8zBs2tvqG7COBBBguyydUI06kPgwXo6X1pSqnE9xpI="
+    - secure: "pSpxU3KeoSNcRfXp33Xvw5WjFLEvKqnHOovpk5YR430rmJEI43CmD8/ogovbw/iTvBQNWUTdb3qLWDzOpnu9IibxsUkJX56Wjme6wyPcVYSjfy35Y0AMC+fScmIVdCRcLE6oJSryOLhOPkpoEBk+eVKQWjsBXP038TDoARanW1xAaakwginWPXjBgAPRkJ4Re202+kP6Er0htKyhDk6xfGKsD8uCQ2PvbDcueSFVc6T0cVbj1Z1bbl5BjutywqwuAwc+bLc8jV62TjYDtSehZK98qZUbBiZ2bG3wMcJF/URy/C1/D7hZ8FewigaGsaWL35JfxPRXaUnXnRrnXG6ogubENbS9Xf0rb8Sf4cU2oPwYxrTzuzLiSbEKNiBylDsXd6kgn+QEkEN8s7saTRpqz2fP+21RQHqlCLeLalTWHr8uKHTnPvmCEVLhL5sJDuHJoMX4KPAc+J7mRq8XGBkgQSSC874TecWUxi4w3u5Cb+guurFuuuXe/TFOZDAcp3eGnGMJxxNdkPAWNXZzbz5VNCDXkv9CrLZq+RZn9RCkk3Wene4SKj+WpkLCduzIKTEjM0AeyFKJ+XK4WJjwmP3wSH22oelM1jeXoFPDtLld4zYlGMN1BUsHW/Y6oPe2YGkN+pmOQo6OsSF3+EHxnMuKVm9LV2/fjJtMzXzVXkZpA8c="
+
+before_install:
+  - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
 
 script:
 
@@ -30,7 +33,7 @@ after_success:
 addons:
   coverity_scan:
     project:
-      name: "guillermocalvo/fmt"
+      name: "LeakyAbstractions/fmt"
       description: "A tiny C string formatting library"
     notification_email: coverity@guillermo.in
     build_command_prepend: "autoreconf --install; ./configure; make clean"
