@@ -1,7 +1,7 @@
 #
 # Site settings
 #
-url: https://guillermocalvo.github.io
+url: https://leakyabstractions.github.io
 baseurl: /fmt
 title: &site_title FMT
 description: &site_description FMT is a tiny C string formatting library
@@ -29,7 +29,7 @@ owner:
   name: Guillermo Calvo
   twitter: &site_owner_twitter gcalvo
   copyright:
-    notice: "[fmt](https://github.com/guillermocalvo/fmt) library and documentation"
+    notice: "[fmt](https://github.com/LeakyAbstractions/fmt) library and documentation"
     author: "[Guillermo Calvo](https://guillermo.in/)"
 
 
@@ -60,7 +60,7 @@ share:
     text: FMT - A tiny #C string formatting #library
     title: Tweet
   github:
-    repo: guillermocalvo/fmt
+    repo: LeakyAbstractions/fmt
     position: right
     color: red
 

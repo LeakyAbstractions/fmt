@@ -24,6 +24,6 @@ You can customise the icon fonts based on your needs.
 
 <div class="cta-container">
 
-[*&nbsp;*{: .fa .fa-cloud-download} Download Now](https://github.com/guillermocalvo/fmt/releases){: .btn .btn-primary .btn-cta}
+[*&nbsp;*{: .fa .fa-cloud-download} Download Now](https://github.com/LeakyAbstractions/fmt/releases){: .btn .btn-primary .btn-cta}
 
 </div>
