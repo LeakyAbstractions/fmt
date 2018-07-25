@@ -39,7 +39,7 @@ Write formatted strings to an output stream.
 
 Copyright 2017 [Guillermo Calvo](https://github.com/guillermocalvo)
 
-[![](https://resume.guillermo.in/assets/images/thumb.png)](https://guillermo.in/)
+[![](https://resume.guillermo.in/assets/images/thumb.png)](https://guillermo.in/) [![Greenkeeper badge](https://badges.greenkeeper.io/LeakyAbstractions/fmt.svg)](https://greenkeeper.io/)
 
 
 ## License
