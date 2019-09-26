@@ -5,6 +5,7 @@
 [![Build status](https://travis-ci.org/LeakyAbstractions/fmt.svg?branch=master)](https://travis-ci.org/LeakyAbstractions/fmt)
 [![Code coverage](https://codecov.io/github/LeakyAbstractions/fmt/coverage.svg?branch=master)](https://codecov.io/github/LeakyAbstractions/fmt?branch=master)
 [![Static analysis](https://scan.coverity.com/projects/14163/badge.svg)](https://scan.coverity.com/projects/leakyabstractions-fmt)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=LeakyAbstractions_fmt&metric=alert_status)](https://sonarcloud.io/dashboard?id=LeakyAbstractions_fmt)
 
 > Print formatted strings
 
