@@ -126,7 +126,8 @@ int fmt_register_formatter(fmt_formatter formatter, const char * id){
 }
 
 /** Parse next parameter */
-static inline int fmt_next_param(const char * format, struct fmt_param * param){
+static inline int fmt_next_param(const char * format, struct fmt_param * param){ /* NOSONAR */
+    /* c:S3776 Cognitive Complexity of functions should not be too high */
 
     for(param->begin = strchr(format, PARAM_MARK); param->begin != NULL; param->begin = strchr(param->begin + 1, PARAM_MARK)){
 
@@ -200,7 +201,8 @@ static inline int fmt_next_param(const char * format, struct fmt_param * param){
 }
 
 /** Print formatted variable list of arguments */
-int fmt_vprint(struct fmt_stream * out, const char * format, va_list * arg){
+int fmt_vprint(struct fmt_stream * out, const char * format, va_list * arg){ /* NOSONAR */
+    /* c:S3776 Cognitive Complexity of functions should not be too high */
 
     struct fmt_param param = { NULL, NULL, NULL, NULL, {0}, 0, 0, 0, 0 };
     int written = 0;
@@ -219,8 +221,6 @@ int fmt_vprint(struct fmt_stream * out, const char * format, va_list * arg){
 
             if(param.id == NULL){
                 /* print builtin parameter */
-                result = FMT_ERROR;
-
                 switch(param.type){
                     case TYPE_INT:
                         switch(param.length){
@@ -241,6 +241,7 @@ int fmt_vprint(struct fmt_stream * out, const char * format, va_list * arg){
                         break;
                     case TYPE_POINTER:      result = PRINT_BUILTIN(out, param, arg, va_arg(*arg, void *) ); break;
                     case TYPE_PERCENT:      result = PRINT_BUILTIN(out, param, arg, 0); break;
+                    default:                result = FMT_ERROR; break;
                 }
 
             }else if(*param.id == PARAM_META){
@@ -290,7 +291,8 @@ int fmt_vprint(struct fmt_stream * out, const char * format, va_list * arg){
 }
 
 /** Print formatted (builtin parameters only) */
-int fmt_print_builtin(struct fmt_stream * out, const char * format, ...){
+int fmt_print_builtin(struct fmt_stream * out, const char * format, ...){ /* NOSONAR */
+    /* c:FunctionEllipsis Functions should not be defined with a variable number of arguments */
 
     int written;
     va_list arg;
@@ -301,11 +303,13 @@ int fmt_print_builtin(struct fmt_stream * out, const char * format, ...){
 
     if( IS_FILE(out) ){
 
-        written = vfprintf(out->file, format, arg);
+        written = vfprintf(out->file, format, arg); /* NOSONAR */
+        /* c:S5281 Argument of "printf" should be a format string */
 
     }else{
 
-        written = vsnprintf(out->buffer, out->bytes, format, arg);
+        written = vsnprintf(out->buffer, out->bytes, format, arg); /* NOSONAR */
+        /* c:S5281 Argument of "printf" should be a format string */
 
         if(written > 0){
             out->buffer += written;
@@ -321,7 +325,8 @@ int fmt_print_builtin(struct fmt_stream * out, const char * format, ...){
 }
 
 /** Print formatted */
-int fmt_print(struct fmt_stream * out, const char * format, ...){
+int fmt_print(struct fmt_stream * out, const char * format, ...){ /* NOSONAR */
+    /* c:FunctionEllipsis Functions should not be defined with a variable number of arguments */
 
     int written;
     va_list arg;
