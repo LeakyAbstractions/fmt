@@ -1,3 +1,5 @@
+dist: trusty
+
 language: c
 
 env:
@@ -23,14 +25,23 @@ script:
   - echo travis_fold:end:MAKE
 
   - echo travis_fold:start:COVERAGE
-  - make coverage
+  - make clean
+  - build-wrapper-linux-x86-64 --out-dir bw-output make coverage
   - echo travis_fold:end:COVERAGE
+
+  - echo travis_fold:start:SONARCLOUD
+  - sonar-scanner
+  - echo travis_fold:end:SONARCLOUD
 
 after_success:
 
   - bash <(curl -s https://codecov.io/bash)
 
 addons:
+  sonarcloud:
+    organization: "leakyabstractions"
+    token:
+      secure: "i5HFYun/xnfZiR8sbPkh5pHA3Amom4XWhVl7atjHPHQ1St/IZnHfBJQ74bCF5Qv6sEdp3nMsbpRNUQfVbzgOJZ1frC+vNNg9d+lKHOG81zE36JuxytPE0YeT4QmpZjGXh5xyCbFWxYURHDWcWdNiXX5oFHXKULFs+gAEOgTv0Sp2ZxkwlczBrqQ30bHhUaG2obKsiWAM6oPidlqFBMv13trBsJA2R4qcrXSJZgIK9Kek0lC8oNiptpq0QvL4IhPo45fXgjczK9und6eXMAN8fHa65cC57zMxmgesyLi4+bSZBzCdAxXavVdn2wnmtiEbTYe0i7pDJTjsACy8+RVjZ59HarPi1wXPuVjlMj1F9HUraap+QY9qkTVSW2XgYu1Ccw4g64Kxz9lcOt3zGtHaaQy3lDIsxmfCmuE460Zj7aGoIlQytuwUaMn51qrRZf+FTQxx4+j4uFY6xXpDL5p9iHw9uIMG4M+Xu0F+uqSJF57OZ/SsQGgisxSxq60fC0XBuahX4cYxsECxTa5uJqfmsiWQj60u5IRIo6OXhc/foMMyCpomCBZYzYtxGVIXA+/HqZXhgDLacud5RshiR2WE+OWthrIIPtNpe+/Cje6Bid3JV5aS1Oiy6OMScBg63fYho5PcAFSqGlLDK0hilL6N1DPjZW2QL3obXOaMCH4t6jk="
   coverity_scan:
     project:
       name: "LeakyAbstractions/fmt"
